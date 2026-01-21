@@ -100,7 +100,9 @@ export default defineComponent({
       }
     },
     enableInterval() {
-      this.intervalId = setInterval(this.uptickCurrent, 4000)
+      if (!this.intervalId) {
+        this.intervalId = setInterval(this.uptickCurrent, 4000)
+      }
     },
     disableInterval() {
       clearInterval(this.intervalId)
@@ -118,6 +120,7 @@ export default defineComponent({
     },
     hideHandler() {
       this.beginHide = true
+      this.disableInterval()
       setTimeout(() => {
         this.menuStep = false
         this.disableInterval()
