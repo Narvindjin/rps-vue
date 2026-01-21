@@ -101,7 +101,7 @@ export default defineComponent({
     },
     enableInterval() {
       if (!this.intervalId) {
-        this.intervalId = setInterval(this.uptickCurrent, 4000)
+        this.intervalId = setInterval(this.uptickCurrent, 3000)
       }
     },
     disableInterval() {
