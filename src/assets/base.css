@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/barlow-600.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/barlow-700.woff2') format('woff2');
+  font-display: swap;
+}
+
+@theme {
+  --font-barlow: 'Barlow Semi Condensed', Arial, sans-serif;
+  --color-blue-dark: hsl(229, 64%, 46%);
+  --color-blue: hsl(230, 89%, 62%);
+  --color-gold: hsl(39, 89%, 49%);
+  --color-gold-dark: hsl(28, 76%, 44%);
+  --color-red: hsl(349, 71%, 52%);
+  --color-red-dark: hsl(347, 75%, 35%);
+  --color-purple: hsl(261, 73%, 60%);
+  --color-purple-dark: hsl(261, 51%, 44%);
+  --color-light-blue: hsl(189, 59%, 53%);
+  --color-light-blue-dark: hsl(194, 58%, 42%);
+  --color-dark-text: hsl(229, 25%, 31%);
+  --color-gray: hsl(246, 11%, 37%);
+  --color-bg-gradient-1: hsl(214, 47%, 23%);
+  --color-bg-gradient-2: hsl(237, 48%, 15%);
+  --breakpoint-desktop: 85rem;
+  --breakpoint-tablet: 48rem;
+  --default-transition-duration: 250ms;
+}
+
+.default-states {
+  @apply hover:opacity-70 active:opacity-50 focus-visible:opacity-50 transition;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  scrollbar-gutter: stable;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}

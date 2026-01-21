@@ -1,0 +1,39 @@
+@import './base.css';
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.remove-scrollbar {
+  scrollbar-width: none;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.animation-base {
+  transition-behavior: allow-discrete;
+  transition-timing-function: ease-in-out;
+  transition-property: filter, visibility, opacity, transform;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20%);
+}
